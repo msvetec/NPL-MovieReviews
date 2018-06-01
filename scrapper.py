@@ -58,7 +58,7 @@ class Scapper:
                         date0 = datetime.datetime.strptime(dat , DateFormat2 )
                         date=(datetime.date.strftime(date0, outPutDateFormat))
                         inputNum = inputNum + 1 
-                        print(inputNum)
+                        #print(inputNum)
                         inputDat = {
                             'text':corpusText,
                             'date':date,
@@ -73,7 +73,7 @@ class Scapper:
                 except:
                     break
             
-            print(url)
+            
             
         corpus=lista
 
@@ -109,5 +109,6 @@ class Scapper:
     url = "https://letterboxd.com/film/tomb-raider/reviews/by/activity/"
     GetReview(url)
     
-    CreateFile()
+    #CreateFile()
+    
   

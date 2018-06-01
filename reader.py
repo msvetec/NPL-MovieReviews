@@ -27,14 +27,8 @@ class Reader:
             svi_dict[key] = ("pos",value)
         for key, value in neg_dict.items():
             svi_dict[key]=("neg",value)
-        print(svi_dict)
-           
         
-        
-        
-        
-            
-
+ 
     OpenFile()
     MakeDict()
 #full done
