@@ -1,0 +1,17 @@
+Tocnost NaiveBayesClassifier: 41.66666666666667%
+15 najinformativnijih rijeci
+('great_neg', 3)
+('best_neg', 3)
+('love_neg', 3)
+('fan_neg', 3)
+('dont_pos', 4)
+('god_neg', 3)
+('death_pos', 2)
+('hard_pos', 1)
+('wrong_pos', 2)
+('dont_pos', 2)
+('care_neg', 2)
+('amazing_neg', 4)
+('want_neg', 1)
+('pretty_neg', 1)
+('does_pos', 3)

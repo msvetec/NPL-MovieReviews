@@ -1,0 +1,17 @@
+Tocnost NaiveBayesClassifier: 58.333333333333336%
+15 najinformativnijih rijeci
+('love', 3)
+('best', 3)
+('great', 3)
+('fan', 3)
+('perfectly', 3)
+('want', 1)
+('right', 3)
+('amazing', 4)
+('god', 3)
+('good', 6)
+('please', 1)
+('good', 3)
+('better', 2)
+('fun', 4)
+('great', 0)

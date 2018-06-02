@@ -11,12 +11,6 @@ corpusName = ""
 
 class Scapper:
 
-##    corpusName = ""
-##    corpusText = ""
-##    rating = 0
-##    date = ""
-##    brComment = ""
-
     def GetReview(_url):
         global corpus
         global corpusName
@@ -29,7 +23,7 @@ class Scapper:
         inputNum = 0
         corpusName = _url.split('/')[4]
         
-        for x in range (0,1):#test for loop
+        for x in range (0,12):#test for loop
             
             if provjera==1:
                 url = _url
@@ -88,9 +82,9 @@ class Scapper:
         fileName=""
         for i in corpus:
             if i['PosNeg']=="pos":
-                savePathTexts = 'Corpus\\pos'
+                savePathTexts = 'Corpus'
             if i['PosNeg']=="neg":
-                savePathTexts = 'Corpus\\neg'
+                savePathTexts = 'Corpus'
                 
             fileName =i['PosNeg']+"_"+corpusName+"_"+i['date']+"_"+str(i['brKomp'])+".txt"           
             with open(os.path.join(savePathTexts, fileName), 'w',encoding='utf-8') as f:
