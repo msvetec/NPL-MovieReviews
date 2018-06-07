@@ -1,0 +1,19 @@
+Tocnost MaxentClassifier: 68.91891891891892%
+
+
+  43.590 free==2 and label is 'POS'
+  43.590 please==1 and label is 'POS'
+  43.590 sexy==3 and label is 'POS'
+  43.590 solid==2 and label is 'POS'
+  43.590 favorite==2 and label is 'POS'
+  43.590 perfect==3 and label is 'POS'
+  43.590 brilliant==4 and label is 'POS'
+  43.590 liked==2 and label is 'POS'
+  43.590 fan==6 and label is 'POS'
+  43.590 favor==2 and label is 'POS'
+  43.590 cute==2 and label is 'POS'
+  43.590 cheering==2 and label is 'POS'
+  43.590 fantastic==4 and label is 'POS'
+  43.590 super==3 and label is 'POS'
+  43.590 god==3 and label is 'POS'
+Tocnost MaxentClassifier: 68.91891891891892%

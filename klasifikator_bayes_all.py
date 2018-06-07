@@ -3,6 +3,7 @@ import GetTextFromFiles as gt
 
 
 
+
 def Bayes():
     corpus = gt.GetText.GetCorpus('ALL',1)
     tocnost= ""
@@ -21,5 +22,5 @@ def Bayes():
         for i in top:
             f.write(str(i)+'\n')
         f.close()
-    
-Bayes()
+
+

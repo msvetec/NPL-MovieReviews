@@ -1,0 +1,1 @@
+Tocnost DecisionTreeClassifier: 67.56756756756756

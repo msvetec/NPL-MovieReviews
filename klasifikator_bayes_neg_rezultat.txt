@@ -1,17 +1,34 @@
-Tocnost NaiveBayesClassifier: 33.33333333333333%
+Tocnost NaiveBayesClassifier: 68.46846846846847%
 15 najinformativnijih rijeci
-('love', 3)
-('great', 3)
-('best', 3)
-('amazing', 4)
-('right', 3)
-('god', 3)
-('fan', 3)
-('please', 1)
-('good', 3)
-('care', 2)
-('wish', 1)
-('kind', 2)
-('fun', 4)
-('pretty', 1)
-('perfectly', 3)
+('alive', 1)
+('effectively', 2)
+('kiss', 2)
+('grace', 1)
+('matter', 1)
+('awesome', 4)
+('funny', 8)
+('humor', 6)
+('clear', 1)
+('pretty', 2)
+('joke', 4)
+('brilliant', 4)
+('positive', 2)
+('joke', 6)
+('hilarious', 2)
+
+Most Informative Features
+                   alive = 1                 NEG : POS    =      5.4 : 1.0
+             effectively = 2                 NEG : POS    =      5.4 : 1.0
+                    kiss = 2                 NEG : POS    =      5.4 : 1.0
+                   grace = 1                 NEG : POS    =      5.4 : 1.0
+                  matter = 1                 NEG : POS    =      5.1 : 1.0
+                 awesome = 4                 POS : NEG    =      4.6 : 1.0
+                   funny = 8                 NEG : POS    =      4.5 : 1.0
+                   humor = 6                 NEG : POS    =      4.4 : 1.0
+                   clear = 1                 NEG : POS    =      4.2 : 1.0
+                  pretty = 2                 NEG : POS    =      4.2 : 1.0
+                    joke = 4                 NEG : POS    =      4.2 : 1.0
+               brilliant = 4                 POS : NEG    =      4.1 : 1.0
+                positive = 2                 NEG : POS    =      3.8 : 1.0
+                    joke = 6                 NEG : POS    =      3.8 : 1.0
+               hilarious = 2                 POS : NEG    =      3.5 : 1.0

@@ -1,0 +1,19 @@
+Tocnost MaxentClassifier: 69.81981981981981%
+
+
+  43.590 protect==1 and label is 'POS'
+  43.590 welcome==2 and label is 'POS'
+  43.590 beautiful==3 and label is 'POS'
+  43.590 excited==3 and label is 'POS'
+  43.590 important==2 and label is 'POS'
+  43.590 laughs==1 and label is 'POS'
+  43.590 strong==2 and label is 'POS'
+  43.590 nice==3 and label is 'POS'
+  43.590 care==4 and label is 'NEG'
+  43.590 better==6 and label is 'POS'
+  43.590 awesome==4 and label is 'POS'
+  43.590 excellent==6 and label is 'POS'
+  43.590 remarkable==2 and label is 'POS'
+  43.590 solid==2 and label is 'POS'
+  43.590 terrific==4 and label is 'POS'
+Tocnost MaxentClassifier: 69.81981981981981%

@@ -22,4 +22,4 @@ def Bayes():
             f.write(str(i)+'\n')
         f.close()
     
-Bayes()
+

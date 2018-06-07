@@ -3,17 +3,31 @@ import requests
 import datetime
 import re
 import os
+import glob
+import time
+import glob
+import time
+import os.path
 
 
 corpus = []
 corpusName = ""
 
+fuTime = 0
+linkStruct = []
+brComentara = 0
+
 
 class Scapper:
 
-    def GetReview(_url):
+    def GetReview(_movieName,_rang):
+        print("======>Preuzimanje komentara<======")
         global corpus
         global corpusName
+        global fuTime
+        global brComentara
+        global linkStruct
+        _url = "https://letterboxd.com/film/"+_movieName+"/reviews/by/activity/"
         lista = []
         posNeg = ""
         provjera = 1
@@ -22,15 +36,16 @@ class Scapper:
         brojac = 2
         inputNum = 0
         corpusName = _url.split('/')[4]
+        start = time.time()
         
-        for x in range (0,12):#test for loop
+        for x in range (0,_rang):#test for loop
             
             if provjera==1:
                 url = _url
             if provjera == 0:
                 url = _url+"page/"+str(brojac)+"/"
                 brojac = brojac +1
-            #url = "https://letterboxd.com/film/tomb-raider/reviews/by/activity/page/4/"
+            linkStruct.append(url)
             res = requests.get(url)
             soup = bs4.BeautifulSoup(res.text, 'html.parser')
             movie_con = soup.find_all('div', {"class" : "film-detail-content"})
@@ -48,11 +63,11 @@ class Scapper:
                         s = text.p.text
                         s = re.sub(r'[^\w\s]','',s)
                         corpusText = s
-                        brComment = str(brojac + 1)
+                        
                         date0 = datetime.datetime.strptime(dat , DateFormat2 )
                         date=(datetime.date.strftime(date0, outPutDateFormat))
-                        inputNum = inputNum + 1 
-                        #print(inputNum)
+                        inputNum = inputNum + 1
+                        brComentara = inputNum
                         inputDat = {
                             'text':corpusText,
                             'date':date,
@@ -67,42 +82,49 @@ class Scapper:
                 except:
                     break
             
-            
-            
         corpus=lista
+        end = time.time()
+        fuTime=end-start
+        fuTime=str(datetime.timedelta(seconds=fuTime))
+        
 
-    
+    def DeleteFiles():
+        mypath = "Corpus"
+        for root, dirs, files in os.walk(mypath):
+            for file in files:
+                os.remove(os.path.join(root, file))
+
 
     def CreateFile():
+        
+        print("======>Kreiranje korpusa<======")
         global corpusName
-        savePathTexts = ""
-        savePathCorpusDate = "Corpus" #promjena kad se izradi klasa za izradu direktorija
+        global linkStruct
+        global brComentara
+        global fuTime
+        savePathTexts = 'Corpus'
         commendText = ""
-        #corpusDate = "" to do
         fileName=""
+        brojac = 0
         for i in corpus:
-            if i['PosNeg']=="pos":
-                savePathTexts = 'Corpus'
-            if i['PosNeg']=="neg":
-                savePathTexts = 'Corpus'
-                
+            brojac=brojac+len(i['text'].split())
             fileName =i['PosNeg']+"_"+corpusName+"_"+i['date']+"_"+str(i['brKomp'])+".txt"           
             with open(os.path.join(savePathTexts, fileName), 'w',encoding='utf-8') as f:
                 f.write(i['text'])
                 f.close()
-
-##to do
-##        with open (os.path.join(savePathCorpusDate,'opis_korpusa.txt'), 'w',encoding='utf-8') as f:
-##            f.write()
                 
+        with open ('opis_korpusa.txt', 'w', encoding='utf-8') as f:
+            f.write ("Letterboxd: letterboxd.com\n"+"Ime filma: "+corpusName.replace("-"," ")+"\n"+"Vrijeme skidanja korpusa: "+str(fuTime)+"\n"+"Broja clanaka: "+str(brComentara)+"\n"+"Broj pojavnica: "+str(brojac)+"\n"+"Izori korpusa:"+"\n\n")
+            for i in linkStruct:
+                f.write(i+"\n")
+            f.close()
+
+  
             
      
          
 
 
-    url = "https://letterboxd.com/film/tomb-raider/reviews/by/activity/"
-    GetReview(url)
-    
-    #CreateFile()
+ 
     
   

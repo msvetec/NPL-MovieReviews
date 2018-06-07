@@ -1,5 +1,6 @@
-import reader
+
 import scrapper as sc
+import reader
              
     
 def Features_neg(_negText):
